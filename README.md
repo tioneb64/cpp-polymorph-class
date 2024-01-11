@@ -1,5 +1,5 @@
 # cpp-polymorph-class
-Two classes to create a polymorphic table in C++ accepting all types of data
+Two classes to create a polymorphic Array in C++ accepting all types of data
 I created the small MultiArray project for educational purposes.
 
 It offers two versions of the same MultiArray class.
