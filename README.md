@@ -14,7 +14,7 @@ The MultiArray class is designed to address this issue. It simulates the behavio
 
 ## Polymorphic Version:
 
-In this version, the MultiArrayPolymorphic class uses an internal "Any" class that can store any data type using polymorphic pointers. This class is compatible with C++14 to C++17. It is not compatible with C++11 because I use "std::unique_ptr," which did not exist and only appeared in C++14.
+In this version, the MultiArrayPolymorphic class uses an internal "Any" class that can store any data type using polymorphic pointers. This class is compatible with C++14 to C++20. It is not compatible with C++11 because I use "std::unique_ptr," which did not exist and only appeared in C++14.
 
 Thanks to the "struct Any" in the class, it can store any data type. The advantage, unlike the "variant" version, is that I can add all data types, or almost all. Almost, because unfortunately, I cannot store <vector> in it.
 
@@ -28,7 +28,7 @@ using ValueVariant = std::variant<int, float, bool, std::string, std::vector<int
 std::vector<ValueVariant> data;
 
 However, if you want to add or remove a type that can be processed by the MultiArrayVariant class, you need to modify this line and then recompile your source.
-
+This class is compatible with C++17 to C++20.
 
 
 Both classes have advantages and disadvantages. Each person will make their choice based on their needs.
