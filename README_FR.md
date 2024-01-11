@@ -1,4 +1,5 @@
-# cpp polymorph class
+# classe polymorphe c++
+Deux classes pour créer une table polymorphe en C++ acceptant tous types de données
 
 J'ai créé le petit projet MultiArray dans un but "éducatif".
 
