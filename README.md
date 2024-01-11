@@ -6,13 +6,13 @@ It offers two versions of the same MultiArray class.
 
 The polymorphic version is flexible but limited. The variant version is limited but flexible.
 
-##Project Explanation:
+## Project Explanation:
 
 The starting premise is that in C++, a multidimensional array is generally a homogeneous structure, meaning that all elements of the array must be of the same data type (int, float, char, std::string, std::vector, ...). However, for a project, I needed to store a certain amount of data with multiple types in an array to work on it easily.
 
 The MultiArray class is designed to address this issue. It simulates the behavior of an array. A multidimensional array with different data types can be simulated using structures or classes.
 
-##Polymorphic Version:
+## Polymorphic Version:
 
 In this version, the MultiArrayPolymorphic class uses an internal "Any" class that can store any data type using polymorphic pointers. This class is compatible with C++14 to C++17. It is not compatible with C++11 because I use "std::unique_ptr," which did not exist and only appeared in C++14.
 
@@ -20,7 +20,7 @@ Thanks to the "struct Any" in the class, it can store any data type. The advanta
 
 However, it has a major advantage over the "variant" version; I can add data types without modifying the source. I can compile it into a library without having to recompile it every time I add a new data type.
 
-##Variant Version:
+## Variant Version:
 
 Similar to the previous version, the MultiArrayVariant class can handle almost all data types. To do this, you just need to add the types that the class container should process in the line:
 
