@@ -15,7 +15,7 @@ La classe MultiArray est là pour répondre à ce problème. Elle simule le comp
 
 ## La version Polymorphe :
 
-Dans cette version, la classe MultiArrayPolymorphe utilise une classe interne "Any" qui peut stocker n'importe quel type de données en utilisant des pointeurs polymorphes. Cette classe est compatible avec les versions C++14 à C++17. Elle n'est pas compatible avec la version C++11 car j'utilise "std::unique_ptr," qui n'existait pas et n'est apparu qu'en C++14.
+Dans cette version, la classe MultiArrayPolymorphe utilise une classe interne "Any" qui peut stocker n'importe quel type de données en utilisant des pointeurs polymorphes. Cette classe est compatible avec les versions C++14 à C++20. Elle n'est pas compatible avec la version C++11 car j'utilise "std::unique_ptr," qui n'existait pas et n'est apparu qu'en C++14.
 
 Grâce à la "struct Any" de la classe, elle peut stocker n'importe quel type de données. L'avantage, contrairement à la version "variant," est que je peux ajouter tous les types de données, ou presque. Presque, parce que malheureusement je ne peux pas stocker des <vector> dedans.
 
@@ -28,7 +28,7 @@ Tout comme la version précédente, la classe MultiArrayVariant est capable de g
 	std::vector<ValueVariant> data;
 
 Par contre, si vous souhaitez ajouter ou supprimer un type pouvant être traité par la classe MultiArrayVariant, vous devez modifier cette ligne et donc compiler de nouveau votre source.
-
+Cette classe est compatible avec les versions C++17 à C++20.
 
 
 Les deux classes ont des avantages et des inconvénients. Chacun fera son choix selon ses besoins.
